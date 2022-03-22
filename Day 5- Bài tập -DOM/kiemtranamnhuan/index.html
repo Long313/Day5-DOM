@@ -7,28 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="demo"></div>
     <script>
-        let dôm = document.getElementById('demo');
-        // lấy số năm để kiểm tra
-        let year = parseInt(prompt("Mời nhập vào một năm: "));
-        while(year < 0 || year > 9000){
+        let year = parseInt(prompt("Mời nhập năm"));
+        while (year <0 && year > 10000){
             year = parseInt(prompt("Mời nhập lại năm"));
         }
-        if (year % 4 == 0) { // nếu năm chia hết cho 4
-            if (year % 100 == 0) { // nếu năm chia hết cho 4 và 100
-            if (year % 400 == 0) { // năm nhuận là năm chia hết cho 4,100 và 400
-                alert(year + " is a leap year");
+        if( year % 4 == 0){
+            if ( year % 100 == 0 && year % 400 != 0){
+                alert(year + " is not a leap year");
             } else {
-                alert(year + " is NOT a leap year");
-            }
-             } else {
-                alert(year + " is a leap year");
-            }
-            } else {
-                alert(year + " is NOT a leap year");
-            }
-
-    </script>
+                alert(year + " is a leap year");}
+        } else {
+            alert(year + " is a leap year")
+        }
+     </script>
 </body>
 </html>
