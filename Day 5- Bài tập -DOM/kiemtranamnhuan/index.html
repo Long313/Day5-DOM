@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        let dôm = document.getElementById('demo');
+        // lấy số năm để kiểm tra
+        let year = parseInt(prompt("Mời nhập vào một năm: "));
+        while(year < 0 || year > 9000){
+            year = parseInt(prompt("Mời nhập lại năm"));
+        }
+        if (year % 4 == 0) { // nếu năm chia hết cho 4
+            if (year % 100 == 0) { // nếu năm chia hết cho 4 và 100
+            if (year % 400 == 0) { // năm nhuận là năm chia hết cho 4,100 và 400
+                alert(year + " is a leap year");
+            } else {
+                alert(year + " is NOT a leap year");
+            }
+             } else {
+                alert(year + " is a leap year");
+            }
+            } else {
+                alert(year + " is NOT a leap year");
+            }
+
+    </script>
+</body>
+</html>

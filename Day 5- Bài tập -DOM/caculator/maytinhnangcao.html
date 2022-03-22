@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <br/>
+    <br/>
+    <button id="0" type="text" onclick="input(this)" >0</button>
+    <button id="1" type="text" onclick="input(this)" >1</button>
+    <button id="2" type="text" onclick="input(this)" >2</button>
+    <button id="3" type="text" onclick="input(this)">3</button>
+    <button id="4" type="text" onclick="input(this)">4</button>
+    <button id="5" type="text" onclick="input(this)">5</button>
+    <button id="6" type="text" onclick="input(this)">6</button>
+    <button id="7" type="text" onclick="input(this)">7</button>
+    <button id="8" type="text" onclick="input(this)">8</button>
+    <button id="9" type="text" onclick="input(this)">9</button>
+    <button id="." type="text" onclick="input(this)">.</button>
+    <button id="3.1416" type="text" onclick="input(this);">&pi;</button>
+    <br/>
+    <br/>
+    <button id="rad" type="text" onclick="radian(this)" style="color:gray">Rad</button>
+    <button id="deg" type="text" onclick="degree(this)" style="color: gray">Deg</button>
+    <button id="+" type="text" onclick="input(this)">+</button>
+    <button id="-" type="text" onclick="input(this)">-</button>
+    <button id="*" type="text" onclick="input(this)">*</button>
+    <button id="/" type="text" onclick="input(this)">/</button>
+    <button id="%" type="text" onclick="input(this)">%</button>
+    <button id="CE" type="text" onclick="input(this)">CE</button>
+    <button id="=" type="text" onclick="cal()">=</button>
+    <script>
+        var str = "";
+        let result = document.getElementById('result')
+        // nhan vao so se tao ra chuoi phep tinh
+        function input(obj){
+            if(obj.id !=="CE"){
+                str += obj.id;
+                result.innerText = str;
+                return str;
+          }  else {
+            str = str.substr(0,str.length-1);
+                result.innerText = str;
+                return str;
+            }
+        }
+        // nhan dau = se thuc hien phep tinh 
+        function cal(){
+            result.innerText = eval(str);
+        }
+        let PI = 3.1416;
+        let rad = document.getElementById("rad");
+        let deg = document.getElementById("deg");
+        let radianInput, degreeInput, radianOutput, degreeOutput;
+        // ham chuyen doi radian va do
+        function radian(obj){
+            obj.style.color = "black";
+            deg.style.color ="gray";
+            
+            str += "*3.1416/180";
+        
+    </script>
+
+
+</body>
+</html>

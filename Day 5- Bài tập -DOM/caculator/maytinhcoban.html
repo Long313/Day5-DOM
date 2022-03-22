@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="first-number" type="number">
+    <input id="second-number" type="number">
+    <br/>
+    <br/>
+    <div id="result"></div>
+    <br/>
+    <br/>
+    <button id="additionBtn">Addition(+)</button>
+    <button id="subtractionBtn">Subtraction(-)</button>
+    <button id="mutiplicationBtn">Multiplication(*)</button>
+    <button id="divisionBtn">Division(/)</button>
+    
+    <script>
+        let firstNumberInput = document.getElementById("first-number");
+        let secondNumberInput = document.getElementById("second-number");
+        let additionBtn = document.getElementById("additionBtn");
+        let subtractionBtn = document.getElementById("subtractionBtn");
+        let multiplicationBtn = document.getElementById("mutiplicationBtn");
+        let divisionBtn = document.getElementById("divisionBtn");   
+        let firstNumber, secondNumber;
+        let result = document.getElementById("result");
+        firstNumberInput.addEventListener('change', function(){
+            firstNumber = parseFloat(firstNumberInput.value);
+        })
+        secondNumberInput.addEventListener('change', function(){
+            secondNumber = parseFloat(secondNumberInput.value);
+        })
+        additionBtn.addEventListener('click', function(){
+            result.innerText = "Result Addtion = " +(firstNumber+secondNumber);
+        })
+        subtractionBtn.addEventListener('click', function(){
+            result.innerText = "Result Subtraction = " +(firstNumber-secondNumber);
+        })
+        multiplicationBtn.addEventListener('click', function(){
+            result.innerText = "Result Multiplication = " +(firstNumber*secondNumber);
+        })
+        divisionBtn.addEventListener('click', function(){
+            result.innerText = "Result Devision = " +(firstNumber/secondNumber);
+        })
+        
+
+    </script>
+</body>
+</html>
